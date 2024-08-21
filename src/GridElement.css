@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Six+Caps&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tulpen+One&display=swap');
+
+
+.scene {
+  perspective: 100%;
+}
+
+.tile-set {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  display: grid;
+  grid-template: 1fr / 1fr;
+}
+
+.tile {
+  position: relative;
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+  text-wrap: pretty;
+}
+
+p {
+  font-size: 1.5vw;
+}
+
+.tile:nth-of-type(1) {
+  z-index: 1;
+}
+.tile:nth-of-type(2) {
+  z-index: 2;
+}
+
+.tile_face--left   { transform: rotateY(-90deg) translateX(50%) rotateY(90deg); }
+.tile_face--top    { transform: rotateX( 90deg) rotateZ(-90deg) rotateY(-90deg) translateX(50%) rotateY(90deg); }
+
+.tile-set.show-left   { transform: rotateY(90deg) translateX(50%) rotateY(-90deg); }
+.tile-set.show-top    { transform: rotateY(90deg) translateX(50%) rotateY(-90deg) rotateZ(90deg) rotateX( -90deg); }
+
+.tile-text {
+  font-family: "Tulpen One", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 2.7vw;
+  line-height: 1;
+}

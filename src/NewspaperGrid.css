@@ -1,0 +1,20 @@
+.grid {
+  max-width: 100%; /* Prevents horizontal overflow */
+  max-height: 100%; /* Prevents vertical overflow */
+  overflow: hidden; /* Hides overflow */
+}
+
+.newspaper-grid:after {
+  content: '';
+  width: 300vw;
+  height: 200%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: rotate(45deg) translateY(-100%) translateX(-10%);
+  transition: all 1s ease-in-out;
+}
+
+/* .newspaper-grid:hover:after {
+  transform: rotate(45deg) translateY(200%);
+} */
